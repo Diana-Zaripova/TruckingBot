@@ -204,3 +204,10 @@ theme: /
             $session.pattern = $parseTree.pattern.name;
             log('@@@' + toPrettyString($parseTree));
         a: {{ $session.pattern }}
+
+    state: byeTest
+        intent!: /bye
+        script:
+            $session.intent = $context.intent;
+            log('###' + toPrettyString($context));
+        a: {{ $session.intent }}
