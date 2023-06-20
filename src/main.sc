@@ -201,5 +201,5 @@ theme: /
     state: hiTest
         q!: * $hi *
         script:
-            $session.pattern = $parseTree.pattern;
+            $session.pattern = $parseTree.pattern.name;
         a: {{ $session.pattern }}
