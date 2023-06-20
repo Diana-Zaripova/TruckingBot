@@ -202,5 +202,5 @@ theme: /
         q!: * $hi *
         script:
             $session.pattern = $parseTree.pattern.name;
-            log('@@@' + $parseTree);
+            log('@@@' + toPrettyString($parseTree));
         a: {{ $session.pattern }}
