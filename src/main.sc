@@ -199,9 +199,9 @@ theme: /
             });
 
     state: hiTest
-        q!: * $hi *
+        q!: * $hi::hi *
         script:
-            $session.pattern = $parseTree.pattern.name;
+            $session.pattern = $parseTree.pattern;
             log('@@@' + toPrettyString($parseTree));
         a: {{ $session.pattern }}
 
