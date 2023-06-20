@@ -9,8 +9,8 @@ theme: /
 
     state: RussiaAbroad
         q!: $regex</start>
-        script:
-            getWelcomeMessage();
+        # script:
+            # getWelcomeMessage();
         a: Добрый день. Это компания <sil[200]>.
     #    audio: https://storage.yandexcloud.net/bot-for-website/TruckingBot/%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C1.wav
         a: Подскажите, пожалуйста, у Вас грузоперевозка в пределах Российской Федерации?
