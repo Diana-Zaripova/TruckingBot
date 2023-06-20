@@ -1,5 +1,5 @@
-patterns: /
+patterns:
 
     $hi = (
             (привет* | хай)
-        )
+            )

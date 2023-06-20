@@ -3,6 +3,7 @@ require: slotfilling/slotFilling.sc
 require: dateTime/dateTime.sc
     module = sys.zb-common
 require: functions.js
+require: patterns.sc
 
 theme: /
 
@@ -196,3 +197,6 @@ theme: /
                 },
                 "method": "sendPhoto"
             });
+
+    state: hiTest
+        q!: * $hi *
