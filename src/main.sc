@@ -208,6 +208,6 @@ theme: /
     state: byeTest
         intent!: /bye
         script:
-            $session.intent = $context.intent;
+            $session.intent = $context.intent.path;
             log('###' + toPrettyString($context));
         a: {{ $session.intent }}
