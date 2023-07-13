@@ -17,20 +17,20 @@ theme: /
     #    audio: https://storage.yandexcloud.net/bot-for-website/TruckingBot/%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C2.wav
 
         script:
-            var get_calls_url = 'https://d5dkebnehldv7u12d8v8.apigw.yandexcloud.net/getCalls';
-            var response = $http.get(get_calls_url);
-            if (response.isOk) {
-                $session.lastCalls = response.data;
-                $session.lastCalls = $session.lastCalls.split(',');
-                var lastCalls = [];
-                for (var i = 0; i < $session.lastCalls.length; i ++) {
-                    if (!($session.lastCalls[i] in lastCalls)) {
-                        lastCalls.push(phoneEdit($session.lastCalls[i]));
-                        }
-                    };
-                log('@@@' + lastCalls);
-                log('!!!' + lastCalls[0]);
-            };
+            // var get_calls_url = 'https://d5dkebnehldv7u12d8v8.apigw.yandexcloud.net/getCalls';
+            // var response = $http.get(get_calls_url);
+            // if (response.isOk) {
+                // $session.lastCalls = response.data;
+                // $session.lastCalls = $session.lastCalls.split(',');
+                // var lastCalls = [];
+                // for (var i = 0; i < $session.lastCalls.length; i ++) {
+                    // if (!($session.lastCalls[i] in lastCalls)) {
+                        // lastCalls.push(phoneEdit($session.lastCalls[i]));
+                        // }
+                    // };
+                // log('@@@' + lastCalls);
+                // log('!!!' + lastCalls[0]);
+            // };
 
         state: ClientAnswerRussia
             intent: /Russia
