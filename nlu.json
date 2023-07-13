@@ -121,6 +121,16 @@
     },
     "patterns" : [ "* пока *", "* bye *" ],
     "priority" : 0
+  }, {
+    "path" : "/operator",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* оператор* *" ],
+    "priority" : 0
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],

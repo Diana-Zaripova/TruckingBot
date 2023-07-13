@@ -211,3 +211,19 @@ theme: /
             $session.intent = $context.intent.path;
             log('###' + toPrettyString($context));
         a: {{ $session.intent }}
+
+
+    state: ChildrenTest
+        q!: * test* *
+
+        state: Comment
+            script:
+                $session.testComment = $parseTree.text;
+                $reactions.answer("OK, I got it!");
+                $reactions.answer('{{$session.testComment}}');
+
+        state: Operator
+            script:
+                $session.testComment = 'operator';
+                $reactions.answer("OK, I will transfer the call to the operator!");
+                $reactions.answer('{{$session.testComment}}');
