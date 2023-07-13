@@ -215,6 +215,12 @@ theme: /
 
     state: ChildrenTest
         q!: * test* *
+        script:
+            if ($context.intent.path === "/operator") {
+                $reactions.transition(( {value: "./Operator", deferred: false} ));
+                } else {
+                    $reactions.transition(( {value: "./Comment", deferred: false} ));
+                    };
 
         state: Comment
             script:
