@@ -213,8 +213,12 @@ theme: /
         a: {{ $session.intent }}
 
 
-    state: ChildrenTest
+    state: ChildrenTest1
         q!: * test* *
+        go!: ../ChildrenTest2
+
+
+    state: ChildrenTest2
         script:
             if ($context.intent.path === "/operator") {
                 $reactions.transition(( {value: "./Operator", deferred: false} ));
