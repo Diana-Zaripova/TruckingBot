@@ -219,20 +219,23 @@ theme: /
 
 
     state: ChildrenTest2
-        script:
-            if ($context.intent.path === "/operator") {
-                $reactions.transition(( {value: "./Operator", deferred: false} ));
-                } else {
-                    $reactions.transition(( {value: "./Comment", deferred: false} ));
-                    };
+        # script:
+            # if ($context.intent.path === "/operator") {
+                # $reactions.transition(( {value: "./Operator", deferred: false} ));
+                # } else {
+                    # $reactions.transition(( {value: "./Comment", deferred: false} ));
+                    # };
 
         state: Comment
+            event: noMatch
+            event: speechNotRecognized
             script:
                 $session.testComment = $parseTree.text;
                 $reactions.answer("OK, I got it!");
                 $reactions.answer('{{$session.testComment}}');
 
         state: Operator
+            intent: /operator
             script:
                 $session.testComment = 'operator';
                 $reactions.answer("OK, I will transfer the call to the operator!");
